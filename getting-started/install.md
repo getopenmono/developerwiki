@@ -7,11 +7,12 @@
 First we begin with downloading the installer package, that will install the framework on your computer:
 
 <table class="table wy-text-center" style="width: 100%;">
-<tr><th>Windows</th><th>Mac</th><th>Linux (Debian)</th></tr>
+<tr><th>Windows (32 bit)</th><th>Windows (64 bit)</th><th>Mac</th><th>Linux (Debian)</th></tr>
 <tr>
-<td><a class="btn btn-neutral"><span class="fa fa-download"></span> Download</a></td>
-<td><a class="btn btn-neutral"><span class="fa fa-download"></span> Download</a></td>
-<td><a class="btn btn-neutral"><span class="fa fa-download"></span> Download</a></td>
+<td><a class="btn btn-neutral" download href="https://github.com/getopenmono/openmono_package/releases/download/v1.0-beta3/OpenMonoSetup-v1.0.12-x86.exe"><span class="fa fa-download"></span> Download</a></td>
+<td><a class="btn btn-neutral" download href="https://github.com/getopenmono/openmono_package/releases/download/v1.0-beta3/OpenMonoSetup-v1.0.12-x64.exe"><span class="fa fa-download"></span> Download</a></td>
+<td><a class="btn btn-neutral" download href="https://github.com/getopenmono/openmono_package/releases/download/v1.0-beta3/OpenMono-v1.0-x64_Mac.pkg"><span class="fa fa-download"></span> Download</a></td>
+<td><a class="btn btn-neutral" target="_blank" href="https://github.com/getopenmono/openmono_package/releases/tag/v1.0-beta3"><span class="fa fa-file-text-o"></span> Instructions</a></td>
 </tr>
 </table>
 <br/>
@@ -42,15 +43,22 @@ If you have installed the toolchain successfully in your path, the `monomake` to
 
 ```
 	ERR: No command argument given! You must provide a command
+	OpenMono project utility, creating new projects and access to monoprog
+
 	Usage:
 	monomake COMMAND [options]
+
 	Commands:
 	  project [name]  Create a new project folder. Default name is: new_mono_project
+	  monoprog [...]  Shortcut to access the MonoProg USB programmer
+	  -p ELF_FILE     Upload an application to mono
+	  reboot          Send Reboot command to Mono, using the Arduino DTR method
+	  bootldr         See if a mono is connected and in bootloader
 	  version         Display the current version of monomake
 	  path            Display the path to the Mono Environment installation dir
 ```
 
-Congratulations, you have the tool chain running! Now, you are ready to crate your first *Hello World* project in the next tutorial.
+Congratulations, you have the tool chain running! Now, you are ready to create your first *Hello World* project in the next tutorial.
 
 #### Any problems?
 
@@ -83,10 +91,17 @@ Like on Mac and Linux, `monomake` should respond with:
 
 ```
 	ERR: No command argument given! You must provide a command
+	OpenMono project utility, creating new projects and access to monoprog
+
 	Usage:
 	monomake COMMAND [options]
+
 	Commands:
 	  project [name]  Create a new project folder. Default name is: new_mono_project
+	  monoprog [...]  Shortcut to access the MonoProg USB programmer
+	  -p ELF_FILE     Upload an application to mono
+	  reboot          Send Reboot command to Mono, using the Arduino DTR method
+	  bootldr         See if a mono is connected and in bootloader
 	  version         Display the current version of monomake
 	  path            Display the path to the Mono Environment installation dir
 ```
