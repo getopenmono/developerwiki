@@ -110,7 +110,31 @@ Compile and upload the app to Mono.
 
 When Mono is plugged in to the USB port, you should see a serial device on your computer. In Windows a *COM* port should be present in *Device manager*. On Linux / Mac there should exist a I/O device in the folder `/dev`. On Mac it would be named something like `/dev/cu.usbmodem1246`. On Linux the name could be `/dev/ttyACM0`.
 
-If you use *minicom* you connect to the serial port with the `-D` flag, like this:
+If using *minicom*, please be sure to configure minicom so that it is set to 9600 baud/N81, and no hardware flow control. This is done most easily via minicom's configuration "utility", accessed like this:
+
+```
+$ minicom -s
+```
+
+Choose `Serial port setup` from the menu, and edit your settings to look like these:
+
+```
+    +-----------------------------------------------------------------------+
+    | A -    Serial Device      : /dev/modem                                |
+    | B - Lockfile Location     : /usr/local/Cellar/minicom/2.7/var         |
+    | C -   Callin Program      :                                           |
+    | D -  Callout Program      :                                           |
+    | E -    Bps/Par/Bits       : 9600 8N1                                  |
+    | F - Hardware Flow Control : No                                        |
+    | G - Software Flow Control : No                                        |
+    |                                                                       |
+    |    Change which setting?                                              |
+    +-----------------------------------------------------------------------+
+```
+
+Exit that screen by pressing `Enter`, and then choose `Save setup as dfl` from the main menu. You may now exit from *minicom*.
+
+Now, to use *minicom* to connect to the serial port, run it with the `-D` flag, like this:
 
 ```
 $ minicom -D /dev/cu.usbmodem1246
