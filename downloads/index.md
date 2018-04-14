@@ -1,6 +1,6 @@
 # OpenMono SDK Downloads
 
-The SDK package contains the tool set needed to install application on Mono and to develop your own allpication.
+The SDK package contains the tool set needed to install application on Mono and to develop your own application.
 
 * [macOS SDK](macos.md)
 * [Windows SDK](windows.md)
